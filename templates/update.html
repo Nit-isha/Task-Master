@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kaushan+Script&family=Poppins:ital,wght@1,200&display=swap');
+</style>
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Update Task</h1>
+
+    <div class="form">
+        <FORM action="/update/{{task.id}}" method="POST">
+            <input type="text" name="content" id="content" value="{{task.content}}">
+            <input type="submit" value="Update" class="submit">
+        </FORM>
+    </div>
+</div>
+
+{% endblock %}
