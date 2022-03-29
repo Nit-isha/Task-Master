@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -28,6 +29,7 @@ def index():
             db.session.add(new_task)
             db.session.commit()
             return redirect('/')
+
         except:
             return 'There was an issue adding your task'
 

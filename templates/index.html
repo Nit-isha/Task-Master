@@ -28,18 +28,18 @@
                 <td>
                     <a href="/delete/{{task.id}}" id="Delete">Delete</a>
                     <br>
-                    <a href="/update/{{task.id}}"">Update</a>
+                    <a href="/update/{{task.id}}">Update</a>
                 </td>
             </tr>
             {% endfor %}
-    </table>
-    {% endif %}
-    <br>
-    <br>
-    <FORM action=" /" method="POST">
-                        <input type="text" name="content" id="content">
-                        <input type="submit" value="Add Task" class="submit">
-                        </FORM>
+        </table>
+        {% endif %}
+        <br>
+        <br>
+        <FORM action=" /" method="POST">
+            <input required type="text" name="content" id="content" placeholder="new task" autofocus="autofocus">
+            <input type="submit" value="Add Task" class="submit">
+        </FORM>
 </div>
 
 {% endblock %}
